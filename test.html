@@ -14,7 +14,25 @@
 
         }
 
-        
+        /* Estilos para el div del fondo */
+.fondo-borroso {
+  background-image: url('2.png');
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Esto lo coloca detrás del contenido */
+  filter: blur(5px);
+}
+
+/* Estilos para que el contenido se vea encima */
+.contenido-principal {
+  position: relative;
+  z-index: 1; /* Esto lo coloca encima del fondo */
+}
         .gradient-bg {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
@@ -97,9 +115,13 @@
     </style>
 </head>
 <body class="bg-gray-50">
+
+  <div class="fondo-borroso"></div>
+  <div class="contenido-principal">
+    
     
     <!-- Imagen fija lateral -->
-<div class="fixex fixed-image hidden lg:block">
+<div class="fixed fixed-image hidden lg:block">
     <div class="w-96 h-[500px] bg-gradient-to-br from-pink-300 to-purple-400 rounded-3xl shadow-2xl overflow-hidden">
       <img src="1.png" alt="Cami" class="w-full h-full object-cover">
         <!-- img src="https://i.ibb.co/RT68fgkW/1.png" alt="Cami" class="w-full h-full object-cover"-->
@@ -1558,7 +1580,7 @@
             </div>
         </footer>
     </div>
-
+  </div>
     <script>
         // Global language switching functionality
         function switchGlobalLanguage(lang) {
