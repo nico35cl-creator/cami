@@ -14,25 +14,6 @@
 
         }
 
-        /* Estilos para el div del fondo */
-.fondo-borroso {
-  background-image: url('2.png');
-  background-size: cover;
-  background-position: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Esto lo coloca detrás del contenido */
-  filter: blur(5px);
-}
-
-/* Estilos para que el contenido se vea encima */
-.contenido-principal {
-  position: relative;
-  z-index: 1; /* Esto lo coloca encima del fondo */
-}
         .gradient-bg {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
@@ -116,8 +97,7 @@
 </head>
 <body class="bg-gray-50">
 
-  <div class="fondo-borroso"></div>
-  <div class="contenido-principal">
+
     
     
     <!-- Imagen fija lateral -->
@@ -1580,7 +1560,7 @@
             </div>
         </footer>
     </div>
-  </div>
+
     <script>
         // Global language switching functionality
         function switchGlobalLanguage(lang) {
